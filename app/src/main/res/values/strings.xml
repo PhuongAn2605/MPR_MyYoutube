@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My YouTube</string>
+    <string name="welcome">Welcome</string>
+    <string name="guide">Enter a link then press Play</string>
+    <string name="videoLink">Link to video</string>
+    <string name="share">Share</string>
+    <string name="txtDislike">0</string>
+    <string name="txtLike">0</string>
+</resources>

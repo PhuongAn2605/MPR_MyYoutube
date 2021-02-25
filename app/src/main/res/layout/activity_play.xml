@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    tools:context=".PlayActivity">
+
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <VideoView
+                android:id="@+id/videoView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/linearLayout"
+            android:id="@+id/actions"
+            >
+
+            <TextView
+                android:id="@+id/txtShare"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/share" />
+
+            <ImageButton
+                android:id="@+id/btnShare"
+                android:layout_width="43dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#67BDB5"
+                android:layout_toLeftOf="@+id/txtShare"
+                app:srcCompat="@drawable/baseline_share_purple_900_24dp" />
+
+            <TextView
+                android:id="@+id/txtDislike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toLeftOf="@+id/btnShare"
+                android:layout_marginRight="10dp"
+                android:text="@string/txtDislike" />
+
+            <ImageButton
+                android:id="@+id/btnDislike"
+                android:layout_width="43dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#67BDB5"
+                android:layout_toLeftOf="@+id/txtDislike"
+                app:srcCompat="@drawable/baseline_thumb_down_deep_purple_900_24dp" />
+
+            <TextView
+                android:id="@+id/txtLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toLeftOf="@+id/btnDislike"
+                android:layout_marginRight="10dp"
+                android:text="@string/txtLike" />
+
+            <ImageButton
+                android:id="@+id/btnLike"
+                android:layout_width="43dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#67BDB5"
+                android:layout_toLeftOf="@+id/txtLike"
+                app:srcCompat="@drawable/baseline_thumb_up_deep_purple_900_24dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/actions">
+
+
+            <TextView
+                android:id="@+id/tvComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:text="Comment"
+                android:textColor="#673AB7"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/txtCommented"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvComment"
+                android:layout_marginLeft="25dp"
+                android:text="Your comment:"
+                android:textColor="#3F51B5"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/txtComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtCommented"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:ems="10"
+                android:hint="Write your comment here"
+                android:inputType="textPersonName" />
+
+            <ImageButton
+                android:id="@+id/btnComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtCommented"
+                android:layout_alignParentRight="true"
+                android:visibility="visible"
+                app:srcCompat="@android:drawable/ic_menu_send" />
+
+        </RelativeLayout>
+    </LinearLayout>
+<!--    </ScrollView>-->
+</RelativeLayout>
